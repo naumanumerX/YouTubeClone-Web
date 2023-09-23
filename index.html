@@ -1,23 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Youtube Clone</title>
-</head>
-<body>
-    <h1 class="text-danger animate__animated animate__bounce">Welcome to Youtube</h1>
-    <i class="fa fa-home"></i>
-    <script>
-        swal("Register","sucessfully","success")
-    </script>
-</body>
+  </head>
+  <body>
+
+    <nav class="navbar shadow-sm navbar-expand-sm">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <button class="btn btn-design">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <button class="btn mx-2 btn-design">
+            <i class="fa-brands fa-youtube" style="color: red"></i>
+          </button>
+          <h5 class="fw-bold mt-1">Youtube <sup>IN</sup></h5>
+        </div>
+        <div class="d-flex align-items-center">
+          <div class="input-group">
+            <input type="search" class="form-control" />
+            <span class="input-group-text">
+              <i class="fa fa-search"></i>
+            </span>
+          </div>
+          <button class="btn btn-design">
+            <i class="fa-solid mx-2 fa-microphone"></i>
+          </button>
+        </div>
+        <div class="d-flex">
+            <button class="btn mx-2 btn-design">
+                <i class="fa-solid fa-video"></i>
+              </button>
+              <button class="btn mx-2 btn-design">
+                <i class="fa-solid fa-bell"></i>
+              </button>
+              <div class="dropdown">
+                <button data-bs-toggle="dropdown" class="btn mx-2 btn-design">
+                    <i class="fa-solid fa-user"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li  class="dropdown-item" data-bs-toggle="modal" data-bs-target="#signup-modal" href="#">Sign-up</li>
+                    <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#login-modal" href="#">Log-in</li>
+                  </ul>
+              </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+       <div class="row mt-3">
+        <div class="col-md-4 ">
+            <div class="shadow-lg p-2">
+                <img  width="100%" src="components/YouTube_screenshot.webp" alt="">
+                <br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+
+            </div>   
+             </div>
+             <div class="col-md-4 ">
+                <div class="shadow-lg p-2">
+                    <img  width="100%" src="components/YouTube_screenshot.webp" alt="">
+                    <br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+
+    
+                </div>   
+                 </div><div class="col-md-4 ">
+                    <div class="shadow-lg p-2">
+                        <img  width="100%" src="components/YouTube_screenshot.webp" alt="">
+                        <br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+
+        
+                    </div>   
+                     </div>
+       
+       </div>
+        
+    </div>
+
+    <div class="modal animate__animated animate__zoomIn" id="signup-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Sign-up</h5>
+                    <button  data-bs-dismiss="modal "class="btn-close btn-design"></button>
+                </div>
+                <div class="modal-body">
+                    <form >
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Name</span>
+                            <input type="text" class="form-control ">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Mobile</span>
+                            <input type="text" class="form-control ">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Email</span>
+                            <input type="text" class="form-control ">
+                        </div>
+                        <div class="input-group mb-3">
+                            
+                            <input type="submit" value="Sign-up"class="btn btn-primary form-control">
+                        </div>
+                        <a href="#"  data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#login-modal">Already have an Account</a>
+                     
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal animate__animated animate__zoomIn" id="login-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>log-in</h5>
+                    <button  data-bs-dismiss="modal "class="btn-close btn-design"></button>
+                </div>
+                <div class="modal-body">
+                    <form >
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Email</span>
+                            <input type="text" class="form-control ">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Password</span>
+                            <input type="password" class="form-control ">
+                        </div>
+                        
+                        <div class="input-group mb-3">
+                            
+                            <input type="submit" value="Log-in"class="btn btn-primary form-control">
+                        </div>
+                        <a href="#"  data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#signup-modal">Create an account</a>
+                     
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
 </html>
