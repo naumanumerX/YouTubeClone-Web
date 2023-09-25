@@ -4,7 +4,7 @@ let allRegData=[];
 let btnClose=document.querySelectorAll(".btn-close");
 let loginForm=document.querySelector(".login-form");
 let lAllInput=loginForm.querySelectorAll("INPUT");
-
+let menuBox=document.querySelector(".menu-box")
 if(localStorage.getItem("allRegData")!=null)
 {
     allRegData=JSON.parse(localStorage.getItem("allRegData"));
@@ -23,7 +23,7 @@ signupForm.onsubmit=(e)=>{
                 mobile:sAllInput[3].value
             });
           localStorage.setItem("allRegData",JSON.stringify(allRegData));
-          btnClose[0].click(); 
+            
           swal("Registration ","Successfully","success")
          /**This is not closing the modal */
            
@@ -43,8 +43,9 @@ loginForm.onsubmit=(e)=>{
        // console.log(email);
        if(email.password==lAllInput[1].value){
         localStorage.setItem("__au__",JSON.stringify(email));
-        window.location="index.html";
+        
         btnClose[1].click();
+        checkLogin();
 
        }
        else{
@@ -55,3 +56,28 @@ loginForm.onsubmit=(e)=>{
         swal("Email Not Registred ","Please Enter Correct Email ","warning")
     }
 }
+const logout=()=>{
+    let logoutBtn=document.querySelector(".logout-btn");
+
+    logoutBtn.onclick=(e)=>{
+       localStorage.removeItem("__au__");
+       swal("User Logged Out","Successfully","success")
+       checkLogin();
+    }
+}
+const checkLogin=()=>{
+    if(localStorage.getItem("__au__")!=null){
+        const userInfo=JSON.parse(localStorage.getItem("__au__"));
+        menuBox.innerHTML=`    <a  class="dropdown-item"  href="components/uploadVideo.html">${userInfo.name}</a>
+        <a class="dropdown-item logout-btn" href="#">Logout</a>
+      `
+      logout();
+    }
+    else{
+        menuBox.innerHTML=`    <a  class="dropdown-item" data-bs-toggle="modal" data-bs-target="#signup-modal" href="#">Sign-up</a>
+        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#login-modal" href="#">Log-in</a>
+      `
+    }
+}
+
+checkLogin();
