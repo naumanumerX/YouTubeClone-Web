@@ -28,3 +28,7 @@
     width: 400px !important;
     box-shadow: none !important;
 }
+.dropdown-menu{
+    position: absolute;
+    left: -110px ! important;
+}
